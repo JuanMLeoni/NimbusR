@@ -3,22 +3,21 @@
 #' @author JM y VM
 #' @examples
 #' Suma(x = 5 , y = 2)
-#' @return Devuelve la suma de dos numeros positivos
-#' @title Suma de numeros
+#' @return Devuelve la suma de dos números positivos
+#' @title Suma de números
 
 
-Suma <- function(x = 0, y = 0){
+Suma <- function(x = 1, y = 1){
   if (!is.numeric(x) | !is.numeric(y)) {
-    stop("El argumento 'x' debe ser numérico")
+    stop("Alguno de los argumentos no son números!")
+  } else {
+    if (sign(x) == -1 | sign(y) == -1 ) {
+      stop("No puedo sumar números negativos")
+    } else {
+      return(x + y)
+    }
   }
 
-  if (sign(x) == -1) {
-    stop("No puedo sumar negativos: el argumento 'x' es negativo")
-  }
-  if (sign(y) == -1) {
-    stop("No puedo sumar negativos: el argumento 'y' es negativo")
-  }
 
 
-  return(x + y)
 }
