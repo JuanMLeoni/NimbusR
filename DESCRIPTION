@@ -1,5 +1,5 @@
-Package: Rprogramacion
-Title: Suma de numeros positivos
+Package: NimbusR
+Title: null 😑
 Version: 0.0.0.9000
 Authors@R: 
     person("Juan Martín", "Leoni", , "jmleoni2004@gmail.com", role = c("aut", "cre"),
