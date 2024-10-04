@@ -1,5 +1,5 @@
 Package: NimbusR
-Title: null 😑
+Title: Paquete Para Leer Y Analizar Datos Meteorológicos
 Version: 0.0.0.9000
 Authors@R: 
     person("Juan Martín", "Leoni", , "jmleoni2004@gmail.com", role = c("aut", "cre"),
