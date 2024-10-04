@@ -1,10 +1,13 @@
+#' @title Suma de números
 #' @description
-#' Suma valores positivos.
-#' @author JM y VM
+#' Suma números positivos.
+#' @param x Argumento int positivo (valor default 1)
+#' @param y Argumento int positivo (valor default 1)
 #' @examples
 #' Suma(x = 5 , y = 2)
+#' Suma(5)
 #' @return Devuelve la suma de dos números positivos
-#' @title Suma de números
+#' @author JM y VM
 
 
 Suma <- function(x = 1, y = 1){

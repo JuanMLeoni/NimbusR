@@ -2,18 +2,24 @@
 % Please edit documentation in R/Suma.R
 \name{Suma}
 \alias{Suma}
-\title{Suma de numeros}
+\title{Suma de números}
 \usage{
-Suma(x = 0, y = 0)
+Suma(x = 1, y = 1)
+}
+\arguments{
+\item{x}{Argumento int positivo (valor default 1)}
+
+\item{y}{Argumento int positivo (valor default 1)}
 }
 \value{
-Devuelve la suma de dos numeros positivos
+Devuelve la suma de dos números positivos
 }
 \description{
 Suma valores positivos.
 }
 \examples{
 Suma(x = 5 , y = 2)
+Suma(5)
 }
 \author{
 JM y VM
