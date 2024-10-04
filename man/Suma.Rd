@@ -15,7 +15,7 @@ Suma(x = 1, y = 1)
 Devuelve la suma de dos números positivos
 }
 \description{
-Suma valores positivos.
+Suma números positivos.
 }
 \examples{
 Suma(x = 5 , y = 2)
