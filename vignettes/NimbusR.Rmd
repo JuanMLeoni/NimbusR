@@ -1,0 +1,26 @@
+---
+title: "NimbusR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{NimbusR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(NimbusR)
+```
+
+NimbusR presenta varias funciones metereológicas como:
+1- `tempCtoF()` que convierte grados de Celsius a Farenheit:
+```{r}
+TempCtoF(10)
+```
+
