@@ -10,5 +10,6 @@
 #' TempFtoc(32)
 #' @author JM y VM
 TempFtoC = function(temperature) {
+  stopifnot(is.numeric(temperature))
   return((temperature - 32)*5/9)
 }
