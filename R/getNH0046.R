@@ -16,7 +16,7 @@ getNH0046 = function (destfile) {
   download.file(url = centro_url, destfile = centro_archivo)
 
   if (file.exists(centro_archivo)) {
-    NH0046 <- read_csv(centro_archivo)
+    NH0046 <- readr::read_csv(centro_archivo)
     return(NH0046)
   } else {
     stop("Error: No se pudo descargar el archivo.")
