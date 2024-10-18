@@ -16,7 +16,7 @@ Temperatura en Celsius (numeric)
 Convierte la temperatura de Farenheit  a Celsius
 }
 \examples{
-TempFtoc(32)
+TempFtoC(32)
 }
 \author{
 JM y VM

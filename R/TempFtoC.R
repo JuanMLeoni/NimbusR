@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' TempFtoc(32)
+#' TempFtoC(32)
 #' @author JM y VM
 TempFtoC = function(temperature) {
   stopifnot(is.numeric(temperature))
