@@ -16,7 +16,7 @@ Si la descarga fue exitosa devuelve el dataset
 Descarga los datos del centro NH0472
 }
 \examples{
-getNH0472("datos/NH0472.csv")
+getNH0472("NH0472.csv")
 }
 \author{
 JM y VM
