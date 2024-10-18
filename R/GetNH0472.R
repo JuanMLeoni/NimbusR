@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' getNH0472("datos/NH0472.csv")
+#' getNH0472("NH0472.csv")
 #' @author JM y VM
 getNH0472 = function (destfile) {
   centro_url = "https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/NH0472.csv"
