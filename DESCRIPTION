@@ -8,7 +8,7 @@ Authors@R:
            comment = c(ORCID = "YOUR-ORCID-ID")))
 Description: Este paquete no esta pensado para ser instalado, es un paquete de
     juguete para apender a desarrollar paquetes de R. Por favor no lo instales
-License: MIT + file LICENSE
+License: MIT
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
