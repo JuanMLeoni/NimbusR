@@ -4,6 +4,10 @@
 # NimbusR
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/JuanMLeoni/NimbusR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JuanMLeoni/NimbusR/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/JuanMLeoni/NimbusR/graph/badge.svg)](https://app.codecov.io/gh/JuanMLeoni/NimbusR)
 <!-- badges: end -->
 
 El objetivo de NimbusR es garantizar al desarrollador herramientas para
