@@ -9,6 +9,7 @@
 #' @examples
 #' getNH0046("NH0046.csv")
 #' @author JM y VM
+#' @importFrom utils download.file
 getNH0046 = function (destfile) {
   centro_url = "https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/NH0046.csv"
   centro_archivo = destfile #Ruta donde se instala
