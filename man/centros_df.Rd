@@ -5,13 +5,13 @@
 \alias{centros_df}
 \title{Datos de centros meteorológicos}
 \format{
-Un dataframe con \code{n} filas y \code{m} columnas:
+Un dataframe con \verb{95,681} filas y \code{35} columnas:
 \describe{
-\item{nombre_centro}{(factor) Nombre del centro meteorológico.}
-\item{latitud}{(numérico) Latitud del centro en grados.}
-\item{longitud}{(numérico) Longitud del centro en grados.}
-\item{altitud}{(numérico) Altitud del centro en metros.}
-\item{fecha_inicio}{(Fecha) Fecha de inicio de operaciones del centro.}
+\item{id}{(chr) Nombre del centro meteorológico.}
+\item{fecha}{(date) Fecha de la observación.}
+\item{temperatura_abrigo_150cm}{(dbl) Temperatura abrigo media.}
+\item{temperatura_abrigo_150cm_maxima}{(dbl) Temperatura abrigo máxima}
+\item{temperatura_abrigo_150cm_minima}{(dbl) Temperatura abrigo mínima.}
 }
 }
 \source{
@@ -21,7 +21,7 @@ Datos ficticios para demostración.
 data(centros_df)
 }
 \description{
-Este conjunto de datos contiene información sobre centros meteorológicos, incluyendo
-su nombre, ubicación geográfica y fecha de inicio de operaciones.
+Este conjunto de datos contiene información sobre los centros meteorológicos NH0910, NH0472, NH0437,
+NH0098 y NH0046
 }
 \keyword{datasets}
