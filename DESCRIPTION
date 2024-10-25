@@ -21,6 +21,7 @@ VignetteBuilder: knitr
 Depends: 
     R (>= 2.10)
 LazyData: true
-Imports: 
+Imports:
+    cli,
     readr
 Config/testthat/edition: 3
