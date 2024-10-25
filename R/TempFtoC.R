@@ -9,7 +9,7 @@
 #' @examples
 #' TempFtoC(32)
 #' @author JM y VM
-TempFtoC = function(temperature) {
-  cli::cli_abort(is.numeric(temperature))
-  return((temperature - 32)*5/9)
-}
+TempFtoC <- function(temperature) {
+  if (!is.numeric(temperature)) {
+    cli::cli_abort("El argumento 'temperature' debe ser numérico.")
+  }}
