@@ -11,5 +11,5 @@
 #' @author JM y VM
 TempFtoC <- function(temperature) {
   if (!is.numeric(temperature)) {
-    cli::cli_abort("El argumento 'temperature' debe ser numérico.")
+    cli::cli_abort("El argumento 'temperature' debe ser numerico.")
   }}
