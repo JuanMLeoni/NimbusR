@@ -10,6 +10,6 @@
 #' TempFtoC(32)
 #' @author JM y VM
 TempFtoC = function(temperature) {
-  stopifnot(is.numeric(temperature))
+  cli::cli_alert_danger(is.numeric(temperature))
   return((temperature - 32)*5/9)
 }
