@@ -7,7 +7,7 @@ Authors@R:
       person("Maximo Hugo", "Verdondoni", , "maxiverdondo04@gmail.com", role = c("col"),
            comment = c(ORCID = "YOUR-ORCID-ID")))
 Description: Paquete Metereológico para leer y analizar datos.
-License: MIT + file LICENSE
+License: MIT
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
@@ -22,6 +22,5 @@ Depends:
     R (>= 2.10)
 LazyData: true
 Imports: 
-    cli,
     readr
 Config/testthat/edition: 3
