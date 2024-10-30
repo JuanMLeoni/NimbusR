@@ -22,6 +22,12 @@ data(centros_df)
 }
 \description{
 Este conjunto de datos contiene información sobre los centros meteorológicos NH0910, NH0472, NH0437,
-NH0098 y NH0046
+NH0098 y NH0046. Y cuenta con datos extraidos desde 1973 en adelante.
 }
-\keyword{datasets}
+\keyword{datasets,temperature,weather
+}
+\examples{
+data(centros_df)
+head(centros_df)
+summary(centros_df)
+}
