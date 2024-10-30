@@ -23,6 +23,7 @@ getNH0910 = function (destfile) {
   })
 
   if (file.exists(centro_archivo)) {
+<<<<<<< HEAD
       tryCatch({
         NH0910 <- readr::read_csv(centro_archivo)
       }, error = function(e) {
@@ -30,6 +31,16 @@ getNH0910 = function (destfile) {
       })
       if (nrow(NH0910) == 0 || ncol(NH0910) == 0) {
         cli::cli_abort("El archivo descargado no contiene datos validos.")}
+=======
+    tryCatch({
+      NH0910 <- readr::read_csv(centro_archivo)
+    }, error = function(e) {
+      cli::cli_abort("No se pudo leer el archivo descargado. Verifique que el archivo sea un CSV valido.")
+    })
+    if (nrow(NH0910) == 0 || ncol(NH0910) == 0) {
+      cli::cli_abort("El archivo descargado no contiene datos validos.")
+    }
+>>>>>>> 54f0cb116270f6a3b0ebef5387288953e28677a1
 
 
     return(NH0910)

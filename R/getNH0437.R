@@ -12,13 +12,30 @@
 getNH0437 = function (destfile) {
   centro_url = "https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/NH0437.csv"
   centro_archivo = destfile #Ruta donde se instala
+  if (missing(centro_archivo) || !is.character(centro_archivo) || destfile == "") {
+    cli::cli_abort("El parametro 'destfile' debe ser una cadena de texto no vacia.")
+  }
 
-  download.file(url = centro_url, destfile = centro_archivo)
+  tryCatch({
+    download.file(url = centro_url, destfile = centro_archivo)
+  }, error = function(e) {
+    cli::cli_abort("Error en la descarga del archivo desde la URL proporcionada.")
+  })
 
   if (file.exists(centro_archivo)) {
-    NH0437 <- readr::read_csv(centro_archivo)
+    tryCatch({
+      NH0437 <- readr::read_csv(centro_archivo)
+    }, error = function(e) {
+      cli::cli_abort("No se pudo leer el archivo descargado. Verifique que el archivo sea un CSV valido.")
+    })
+    if (nrow(NH0437) == 0 || ncol(NH0437) == 0) {
+      cli::cli_abort("El archivo descargado no contiene datos validos.")
+    }
+
+
     return(NH0437)
+
   } else {
-    stop("Error: No se pudo descargar el archivo.")
+    cli::cli_abort("El archivo no se descargo correctamente.")
   }
 }
