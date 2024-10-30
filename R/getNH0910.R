@@ -23,15 +23,13 @@ getNH0910 = function (destfile) {
   })
 
   if (file.exists(centro_archivo)) {
-    expect_error(
       tryCatch({
         NH0910 <- readr::read_csv(centro_archivo)
       }, error = function(e) {
         cli::cli_abort("No se pudo leer el archivo descargado. Verifique que el archivo sea un CSV valido.")
-      }),
+      })
       if (nrow(NH0910) == 0 || ncol(NH0910) == 0) {
         cli::cli_abort("El archivo descargado no contiene datos validos.")}
-    )
 
 
     return(NH0910)
