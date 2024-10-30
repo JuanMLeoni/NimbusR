@@ -36,3 +36,18 @@ test_that("Falla si el archivo no es un CSV válido", {
 
   unlink(archivo_temp)
 })
+
+test_that("Falla si el archivo no se descarga correctamente", {
+  archivo_temp <- tempfile(fileext = ".csv")
+
+  # Simulamos que download.file no descarga el archivo
+  with_mocked_bindings(
+    download.file = function(...) {
+
+    },
+    {
+      expect_error(getNH0910(archivo_temp),
+                   "El archivo no se descargo correctamente.")
+    }
+  )
+})
