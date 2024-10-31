@@ -51,7 +51,8 @@
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>NimbusR</h1>
-                        <h4 data-toc-skip class="author">JML y MV</h4>
+                        <h4 data-toc-skip class="author">Juan Martín
+Leoni y Máximo Verdondoni</h4>
             
       
       <small class="dont-index">Source: <a href="https://github.com/JuanMLeoni/Rprogramacion/blob/master/vignettes/NimbusR.Rmd" class="external-link"><code>vignettes/NimbusR.Rmd</code></a></small>
@@ -60,14 +61,129 @@
 
     
     
+<div class="section level2">
+<h2 id="importamos-nimbusr">Importamos NimbusR…<a class="anchor" aria-label="anchor" href="#importamos-nimbusr"></a>
+</h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JuanMLeoni/Rprogramacion" class="external-link">NimbusR</a></span><span class="op">)</span></span></code></pre></div>
-<p>NimbusR presenta varias funciones metereológicas como: 1-
-<code>tempCtoF()</code> que convierte grados de Celsius a Farenheit:</p>
+<code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
+<span><span class="co">#pak::pak("JuanMLeoni/NimbusR")</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JuanMLeoni/Rprogramacion" class="external-link">NimbusR</a></span><span class="op">)</span></span></code></pre></div>
+<p>Para verificar que fue importado correctamente con:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/TempCtoF.html">TempCtoF</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] 50</span></span></code></pre></div>
-  </main>
+<span><span class="co">#&gt; [1] 50</span></span>
+<span><span class="fu"><a href="../reference/TempFtoC.html">TempFtoC</a></span><span class="op">(</span><span class="fl">32</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 0</span></span></code></pre></div>
+<div class="section level3">
+<h3 id="trabajando-con-los-datos">Trabajando con los datos…<a class="anchor" aria-label="anchor" href="#trabajando-con-los-datos"></a>
+</h3>
+<p>Guardemos los datos de los centros:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">centros</span> <span class="op">&lt;-</span> <span class="fu">NimbusR</span><span class="fu">::</span><span class="va"><a href="../reference/centros_df.html">centros_df</a></span></span></code></pre></div>
+<p>Si queres el dataset del centro en especifico podes usar
+<code>getNH....()</code> (esta función descarga el .csv en tu
+computadora en la ruta proporcionada):</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#NH0910 &lt;- getNH0910("datos/NH0910.csv")</span></span></code></pre></div>
+<p>Otros centros disponibles para descargar:</p>
+<ul>
+<li><p><code><a href="../reference/getNH0472.html">getNH0472()</a></code></p></li>
+<li><p><code><a href="../reference/getNH0437.html">getNH0437()</a></code></p></li>
+<li><p><code><a href="../reference/getNH0098.html">getNH0098()</a></code></p></li>
+<li><p><code><a href="../reference/getNH0046.html">getNH0046()</a></code></p></li>
+</ul>
+<p>Pero si queres leer el .csv sin descargarlo usar:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">NH0910</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/read_centro_csv.html">read_centro_csv</a></span><span class="op">(</span><span class="st">"NH0910"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">15553</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">35</span></span></span>
+<span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
+<span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> ","</span></span>
+<span><span class="co">#&gt; <span style="color: #BB0000;">chr</span>   (1): id</span></span>
+<span><span class="co">#&gt; <span style="color: #00BB00;">dbl</span>   (5): temperatura_abrigo_150cm, temperatura_abrigo_150cm_maxima, temper...</span></span>
+<span><span class="co">#&gt; <span style="color: #BBBB00;">lgl</span>  (28): temperatura_intemperie_5cm_minima, temperatura_intemperie_50cm_mi...</span></span>
+<span><span class="co">#&gt; <span style="color: #0000BB;">date</span>  (1): fecha</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
+<span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
+<span><span class="va">NH0910</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 15,553 × 35</span></span></span>
+<span><span class="co">#&gt;    id     fecha      temperatura_abrigo_150cm temperatura_abrigo_150cm_maxima</span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>                        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>                           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> NH0910 1975-01-01                     21                              31  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> NH0910 1975-01-02                     21.2                            28.5</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> NH0910 1975-01-03                     24.2                            32.5</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> NH0910 1975-01-04                     23.5                            31  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> NH0910 1975-01-05                     19                              22  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> NH0910 1975-01-06                     22.2                            27.5</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> NH0910 1975-01-07                     24.2                            30  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> NH0910 1975-01-08                     26.5                            33.5</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> NH0910 1975-01-09                     26.5                            35  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> NH0910 1975-01-10                     19.2                            25  </span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 15,543 more rows</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 31 more variables: temperatura_abrigo_150cm_minima &lt;dbl&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   temperatura_intemperie_5cm_minima &lt;lgl&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   temperatura_intemperie_50cm_minima &lt;lgl&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   temperatura_suelo_5cm_media &lt;lgl&gt;, temperatura_suelo_10cm_media &lt;lgl&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   temperatura_inte_5cm &lt;lgl&gt;, temperatura_intemperie_150cm_minima &lt;lgl&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   humedad_suelo &lt;lgl&gt;, precipitacion_pluviometrica &lt;dbl&gt;, granizo &lt;lgl&gt;, …</span></span></span></code></pre></div>
+<p>NimbusR tambien contiene los metadatos de los centros meteorológicos,
+se pueden importar así:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">metadatos</span> <span class="op">&lt;-</span> <span class="fu">NimbusR</span><span class="fu">::</span><span class="va"><a href="../reference/metadatos.html">metadatos</a></span></span>
+<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">metadatos</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Rows: 258</span></span>
+<span><span class="co">#&gt; Columns: 11</span></span>
+<span><span class="co">#&gt; $ id        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "A872999", "A872834", "A872823", "A872822", "A872821", "A872…</span></span>
+<span><span class="co">#&gt; $ nombre    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Instituto de Clima y Agua", "Lima - EEA San Pedro", "Anguil…</span></span>
+<span><span class="co">#&gt; $ tipo      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Nimbus THP", "Nimbus THP", "Nimbus THP", "Nimbus THP", "Nim…</span></span>
+<span><span class="co">#&gt; $ localidad <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Hurlingham", "Lima", "Anguil", "Huinca Renanco", "General S…</span></span>
+<span><span class="co">#&gt; $ provincia <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Buenos Aires", "Buenos Aires", "La Pampa", "Córdoba", "La P…</span></span>
+<span><span class="co">#&gt; $ lat       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> -90.00, -34.08, -36.54, -34.77, -38.00, -38.15, -38.34, -37.…</span></span>
+<span><span class="co">#&gt; $ lon       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 0.00, -59.21, -63.99, -64.37, -63.52, -57.99, -59.01, -62.04…</span></span>
+<span><span class="co">#&gt; $ altura    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 22.0, 28.0, 165.0, 189.0, 177.9, 12.0, 72.0, 237.0, 280.0, 1…</span></span>
+<span><span class="co">#&gt; $ ubicacion <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Jardin Botanico Ragonese INTA", "Ruta 9 - Km 100 - Lima", "…</span></span>
+<span><span class="co">#&gt; $ desde     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2000-01-04T00:00:00Z[UTC]", "2010-08-25T00:00:00Z[UTC]", "2…</span></span>
+<span><span class="co">#&gt; $ hasta     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2024-05-23T00:00:00Z[UTC]", "2024-03-23T00:00:00Z[UTC]", "2…</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="graficando">Graficando…<a class="anchor" aria-label="anchor" href="#graficando"></a>
+</h3>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_temperatura_abrigo.html">plot_temperatura_abrigo</a></span><span class="op">(</span><span class="va">centros</span><span class="op">)</span></span></code></pre></div>
+<p><img src="NimbusR_files/figure-html/unnamed-chunk-7-1.png" width="768"></p>
+<p>Recordar que <code>plot_temperatura_abrigo</code> tiene 2 parametros
+opcionales:</p>
+<ul>
+<li><p>Colores = Para cambiar los colores de las lineas en el
+gráfico</p></li>
+<li><p>Titulo = Para cambiar el titulo en nuestro plot</p></li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="analizamos-la-temperatura-abrigo-por-centro">Analizamos la temperatura abrigo por centro…<a class="anchor" aria-label="anchor" href="#analizamos-la-temperatura-abrigo-por-centro"></a>
+</h3>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/Summary_Temperatura_Abrigo.html">Summary_Temperatura_Abrigo</a></span><span class="op">(</span><span class="va">centros</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 5 × 5</span></span></span>
+<span><span class="co">#&gt;   id     temperatura_media temperatura_max temperatura_min temperatura_sd</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> NH0046              17.3            34.6           -<span style="color: #BB0000;">0.25</span>           5.90</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> NH0098              18.6            37.4          -<span style="color: #BB0000;">17.4</span>            5.98</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> NH0437              20.2            36.3            2.1            5.77</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> NH0472              18.0            34.8            0.55           5.94</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> NH0910              17.7            35.2            0              6.12</span></span></code></pre></div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="para-más-información-de-las-funciones">Para más información de las funciones…<a class="anchor" aria-label="anchor" href="#para-m%C3%A1s-informaci%C3%B3n-de-las-funciones"></a>
+</h2>
+<p>Entrar en Rstudio y buscar la documentación con:</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#?centros_df</span></span>
+<span><span class="co">#?plot_temperatura_abrigo</span></span></code></pre></div>
+</div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
