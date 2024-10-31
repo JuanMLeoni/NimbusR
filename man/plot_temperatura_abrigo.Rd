@@ -15,9 +15,6 @@ Gráfico de la temperatura abrigo.
 \description{
 Genera un grafico de serie de tiempo que muestra la temperatura abrigo de cada estacion
 }
-\examples{
-plot_temperatura_abrigo(NH0472, otro_dataset)
-}
 \author{
 JM y VM
 }

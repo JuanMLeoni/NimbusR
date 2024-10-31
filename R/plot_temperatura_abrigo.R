@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' plot_temperatura_abrigo(NH0472, otro_dataset)
+#'
 #' @author JM y VM
 plot_temperatura_abrigo <- function(...) {
   # Combina los datasets
