@@ -16,7 +16,7 @@
 #'   \item{altura}{(dbl) Altura del nivel del mar del centro}
 #'   \item{ubicacion}{(chr) Direccion del centro}
 #' }
-#' @source "https://github.com/rse-r/intro-programacion/blob/main/datos/metadatos_completos.csv"
+#' @source https://github.com/rse-r/intro-programacion/blob/main/datos/metadatos_completos.csv
 #' @seealso [centros_df]
 #' @keywords datasets
 "metadatos"

@@ -19,7 +19,7 @@ Un dataframe con \code{258} filas y \code{11} columnas:
 }
 }
 \source{
-"https://github.com/rse-r/intro-programacion/blob/main/datos/metadatos_completos.csv"
+https://github.com/rse-r/intro-programacion/blob/main/datos/metadatos_completos.csv
 }
 \usage{
 data(metadatos)

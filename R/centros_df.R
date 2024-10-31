@@ -43,6 +43,7 @@
 #'   \item{horas_frio}{(dbl)Cantidad de horas de frío registradas, valores numéricos.}
 #'   \item{unidad_frio}{(lgl)Unidad de medida para las horas de frío, valores NA.}
 #' }
-#' @source Datos ficticios para demostración.
+#' @source https://github.com/rse-r/intro-programacion/tree/main/datos
+#' @seealso [getNH0910()], [getNH0472()], [getNH0437()], [getNH0098()], [getNH0046()]
 #' @keywords datasets
 "centros_df"
