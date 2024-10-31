@@ -9,6 +9,7 @@
 #' @examples
 #' getNH0098("NH0098.csv")
 #' @author JM y VM
+#' @seealso [getNH0910()], [getNH0472()], [getNH0437()], [getNH0046()]
 getNH0098 = function (destfile) {
   centro_url = "https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/NH0098.csv"
   centro_archivo = destfile #Ruta donde se instala

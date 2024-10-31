@@ -25,6 +25,7 @@ Imports:
     cli,
     dplyr,
     ggplot2,
+    httr,
     lubridate,
     readr
 Config/testthat/edition: 3

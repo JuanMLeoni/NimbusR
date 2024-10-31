@@ -18,6 +18,9 @@ Descarga los datos del centro NH0046
 \examples{
 getNH0046("NH0046.csv")
 }
+\seealso{
+\code{\link[=getNH0910]{getNH0910()}}, \code{\link[=getNH0472]{getNH0472()}}, \code{\link[=getNH0437]{getNH0437()}}, \code{\link[=getNH0098]{getNH0098()}}
+}
 \author{
 JM y VM
 }
