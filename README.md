@@ -3,6 +3,9 @@
 
 # NimbusR
 
+NimbusR
+<a href="NimbusR"><img src="imagenes/Logo2.png" alt="NimbusR" align="right" style="float: right; margin-left: 10px;" width="200"/></a>
+
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/JuanMLeoni/NimbusR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JuanMLeoni/NimbusR/actions/workflows/R-CMD-check.yaml)
