@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     c(person("Juan Martín", "Leoni", , "jmleoni2004@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID")),
-      person("Maximo Hugo", "Verdondoni", , "maxiverdondo04@gmail.com", role = c("col"),
+      person("Maximo Hugo", "Verdondoni", , "maxiverdondo04@gmail.com", role = c("aut"),
            comment = c(ORCID = "YOUR-ORCID-ID")))
 Description: Paquete Metereológico para leer y analizar datos.
 License: MIT + file LICENSE
