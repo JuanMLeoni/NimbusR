@@ -12,7 +12,7 @@ Summary_Temperatura_Abrigo = function(...) {
   Estaciones_lista <- list(...)
 
   if (!all(sapply(Estaciones_lista, is.data.frame))) {
-    cli::cli_abort("Todos los parámetros deben ser data frames.")
+    cli::cli_abort("Todos los parametros deben ser data frames.")
   }
 
   # Definir columnas requeridas
