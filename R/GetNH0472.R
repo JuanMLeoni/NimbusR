@@ -2,10 +2,8 @@
 #' @description
 #' Descarga los datos del centro NH0472
 #' @param destfile Ruta donde se descargará el .csv
-#'
 #' @return Si la descarga fue exitosa devuelve el dataset
 #' @export
-#'
 #' @examples
 #' getNH0472("NH0472.csv")
 #' @author JM y VM
