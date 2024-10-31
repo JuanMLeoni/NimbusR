@@ -4,7 +4,7 @@
 # NimbusR
 
 NimbusR
-<a href="NimbusR"><img src="imagenes/Logo2.png" alt="NimbusR" align="right" style="float: right; margin-left: 10px;" width="200"/></a>
+<img src="imagenes/Logo2.png" alt="NimbusR" align="right" style="float: right; margin-left: 10px;" width="200"/>
 
 <!-- badges: start -->
 
