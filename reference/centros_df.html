@@ -48,25 +48,119 @@ NH0098 y NH0046</p>
     <div class="section level2">
     <h2 id="format">Format<a class="anchor" aria-label="anchor" href="#format"></a></h2>
     <p>Un dataframe con <code>95,681</code> filas y <code>35</code> columnas:</p><dl><dt>id</dt>
-<dd><p>(chr) Nombre del centro meteorológico.</p></dd>
+<dd><p>(chr)ID de la estacion, datos categoricos.</p></dd>
 
 <dt>fecha</dt>
-<dd><p>(date) Fecha de la observación.</p></dd>
+<dd><p>(date)Fecha de la medicion, datos temporales.</p></dd>
 
 <dt>temperatura_abrigo_150cm</dt>
-<dd><p>(dbl) Temperatura abrigo media.</p></dd>
+<dd><p>(dbl)Temperatura medida en abrigo a 150 cm, datos numéricos.</p></dd>
 
 <dt>temperatura_abrigo_150cm_maxima</dt>
-<dd><p>(dbl) Temperatura abrigo máxima</p></dd>
+<dd><p>(dbl)Temperatura máxima en abrigo a 150 cm, datos numéricos.</p></dd>
 
 <dt>temperatura_abrigo_150cm_minima</dt>
-<dd><p>(dbl) Temperatura abrigo mínima.</p></dd>
+<dd><p>(dbl)Temperatura mínima en abrigo a 150 cm, datos numéricos.</p></dd>
+
+<dt>temperatura_intemperie_5cm_minima</dt>
+<dd><p>(dbl)Temperatura mínima medida en intemperie a 5 cm del suelo, valores NA.</p></dd>
+
+<dt>temperatura_intemperie_50cm_minima</dt>
+<dd><p>(dbl)Temperatura mínima medida en intemperie a 50 cm del suelo, valores NA.</p></dd>
+
+<dt>temperatura_suelo_5cm_media</dt>
+<dd><p>(dbl)Temperatura media medida en el suelo a 5 cm de profundidad, valores NA.</p></dd>
+
+<dt>temperatura_suelo_10cm_media</dt>
+<dd><p>(dbl)Temperatura media medida en el suelo a 10 cm de profundidad, valores NA.</p></dd>
+
+<dt>temperatura_inte_5cm</dt>
+<dd><p>(lgl)Temperatura medida a 5 cm en intemperie, valores NA.</p></dd>
+
+<dt>temperatura_intemperie_150cm_minima</dt>
+<dd><p>(lgl)Temperatura mínima en intemperie a 150 cm, valores NA.</p></dd>
+
+<dt>humedad_suelo</dt>
+<dd><p>(lgl)Humedad del suelo, valores NA.</p></dd>
+
+<dt>precipitacion_pluviometrica</dt>
+<dd><p>(dbl)Precipitación pluviométrica en mm, datos numéricos.</p></dd>
+
+<dt>granizo</dt>
+<dd><p>(dbl)Indica presencia de granizo, valores NA.</p></dd>
+
+<dt>nieve</dt>
+<dd><p>(dbl)Indica presencia de nieve, valores NA.</p></dd>
+
+<dt>heliofania_efectiva</dt>
+<dd><p>(dbl)Heliofanía efectiva, valores NA.</p></dd>
+
+<dt>heliofania_relativa</dt>
+<dd><p>(dbl)Heliofanía relativa, valores NA.</p></dd>
+
+<dt>tesion_vapor_media</dt>
+<dd><p>(dbl)Tensión de vapor media, valores NA.</p></dd>
+
+<dt>humedad_media</dt>
+<dd><p>(lgl)Humedad relativa media, valores NA.</p></dd>
+
+<dt>humedad_media_8_14_20</dt>
+<dd><p>(dbl)Humedad relativa media registrada a las 8, 14 y 20 horas, valores NA.</p></dd>
+
+<dt>rocio_medio</dt>
+<dd><p>(dbl)Punto de rocío medio, valores NA.</p></dd>
+
+<dt>duracion_follaje_mojado</dt>
+<dd><p>(dbl)Duración del follaje mojado, valores NA.</p></dd>
+
+<dt>velocidad_viento_200cm_media</dt>
+<dd><p>(dbl)Velocidad media del viento a 200 cm de altura, valores NA.</p></dd>
+
+<dt>direccion_viento_200cm</dt>
+<dd><p>(lgl)Dirección del viento a 200 cm de altura, valores NA.</p></dd>
+
+<dt>velocidad_viento_1000cm_media</dt>
+<dd><p>(dbl)Velocidad media del viento a 1000 cm de altura, valores NA.</p></dd>
+
+<dt>direccion_viento_1000cm</dt>
+<dd><p>(chr)Dirección del viento a 1000 cm de altura, valores NA.</p></dd>
+
+<dt>velocidad_viento_maxima</dt>
+<dd><p>(lgl)Velocidad máxima del viento registrada, valores NA.</p></dd>
+
+<dt>presion_media</dt>
+<dd><p>(dbl)Presión atmosférica media, valores NA.</p></dd>
+
+<dt>radiacion_global</dt>
+<dd><p>(dbl)Radiación solar global medida en la estación, valores NA.</p></dd>
+
+<dt>radiacion_neta</dt>
+<dd><p>(dbl)Radiación neta medida en la estación, valores NA.</p></dd>
+
+<dt>evaporacion_tanque</dt>
+<dd><p>(lgl)Evaporación medida en tanque, valores NA.</p></dd>
+
+<dt>evapotranspiracion_potencial</dt>
+<dd><p>(dbl)Evapotranspiración potencial, valores NA.</p></dd>
+
+<dt>profundidad_napa</dt>
+<dd><p>(dbl)Profundidad de la napa freática, valores NA.</p></dd>
+
+<dt>horas_frio</dt>
+<dd><p>(dbl)Cantidad de horas de frío registradas, valores numéricos.</p></dd>
+
+<dt>unidad_frio</dt>
+<dd><p>(lgl)Unidad de medida para las horas de frío, valores NA.</p></dd>
 
 
 </dl></div>
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
-    <p>Datos ficticios para demostración.</p>
+    <p>https://github.com/rse-r/intro-programacion/tree/main/datos</p>
+    </div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p><code><a href="getNH0910.html">getNH0910()</a></code>, <code><a href="getNH0472.html">getNH0472()</a></code>, <code><a href="getNH0437.html">getNH0437()</a></code>, <code><a href="getNH0098.html">getNH0098()</a></code>, <code><a href="getNH0046.html">getNH0046()</a></code></p></div>
     </div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
