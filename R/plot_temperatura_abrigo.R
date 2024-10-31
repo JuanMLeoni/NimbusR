@@ -1,9 +1,13 @@
 #' @title Serie de tiempo temperatura abrigo
 #' @description
 #' Genera un grafico de serie de tiempo que muestra la temperatura abrigo de cada estacion
-#' @param dataset Dataset con datos de los centros (Deben tener columna "temperatura_abrigo_150cm")
+#' @param dataset Dataset con datos de los centros
+#' @param colores Un vector opcional de colores para las líneas de cada estación en el gráfico. **Default es `NULL`**, en cuyo caso se seleccionan colores aleatorios.
+#' @param titulo Un título opcional para el gráfico. **Default es `"Temperatura"`.**
 #' @details
-#' Los dataset deben tener una columna "id" para identificar el centro metereologico
+#' 1. El dataset debe tener una columna "id" para identificar el centro metereologico.
+#' 2. Debe tener columna "temperatura_abrigo_150cm".
+#' 3. Debe tener columna "fecha" de tipo Date.
 #'
 #' @return Grafico de la temperatura abrigo.
 #' @export
@@ -14,6 +18,7 @@
 #' plot_temperatura_abrigo(dataset, titulo = "Temperatura Abrigo Mensual")
 #' plot_temperatura_abrigo(df,c("red", "blue", "black","pink", "lightblue"), titulo = "Temperatura Abrigo Mensual")
 #' @author JM y VM
+#' @seealso [centros_df] Para ver el dataset del ejemplo
 plot_temperatura_abrigo <- function(dataset, colores = NULL, titulo = "Temperatura Abrigo") {
   # Validaciones de `dataset` y columnas
   if (!"data.frame" %in% class(dataset)) {

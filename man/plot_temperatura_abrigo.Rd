@@ -7,7 +7,11 @@
 plot_temperatura_abrigo(dataset, colores = NULL, titulo = "Temperatura Abrigo")
 }
 \arguments{
-\item{dataset}{Dataset con datos de los centros (Deben tener columna "temperatura_abrigo_150cm")}
+\item{dataset}{Dataset con datos de los centros}
+
+\item{colores}{Un vector opcional de colores para las líneas de cada estación en el gráfico. \strong{Default es \code{NULL}}, en cuyo caso se seleccionan colores aleatorios.}
+
+\item{titulo}{Un título opcional para el gráfico. \strong{Default es \code{"Temperatura"}.}}
 }
 \value{
 Grafico de la temperatura abrigo.
@@ -16,13 +20,20 @@ Grafico de la temperatura abrigo.
 Genera un grafico de serie de tiempo que muestra la temperatura abrigo de cada estacion
 }
 \details{
-Los dataset deben tener una columna "id" para identificar el centro metereologico
+\enumerate{
+\item El dataset debe tener una columna "id" para identificar el centro metereologico.
+\item Debe tener columna "temperatura_abrigo_150cm".
+\item Debe tener columna "fecha" de tipo Date.
+}
 }
 \examples{
 dataset <- NimbusR::centros_df
 plot_temperatura_abrigo(dataset)
 plot_temperatura_abrigo(dataset, titulo = "Temperatura Abrigo Mensual")
 plot_temperatura_abrigo(df,c("red", "blue", "black","pink", "lightblue"), titulo = "Temperatura Abrigo Mensual")
+}
+\seealso{
+\link{centros_df} Para ver el dataset del ejemplo
 }
 \author{
 JM y VM
