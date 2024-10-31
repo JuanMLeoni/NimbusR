@@ -1,6 +1,6 @@
 ---
 title: "NimbusR"
-author: "JML y MV"
+author: "Juan Martín Leoni y Máximo Verdondoni"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{NimbusR}
@@ -8,22 +8,91 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-
-
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.width = 8,
+  fig.height = 5
 )
 ```
 
+## Importamos NimbusR...
+
 ```{r setup}
+# install.packages("pak")
+#pak::pak("JuanMLeoni/NimbusR")
 library(NimbusR)
 ```
 
-NimbusR presenta varias funciones metereológicas como:
-1- `tempCtoF()` que convierte grados de Celsius a Farenheit:
+Para verificar que fue importado correctamente con:
+
 ```{r}
 TempCtoF(10)
+TempFtoC(32)
 ```
 
+### Trabajando con los datos...
+
+Guardemos los datos de los centros:
+
+```{r}
+centros <- NimbusR::centros_df
+```
+
+Si queres el dataset del centro en especifico podes usar `getNH....()` (esta función descarga el .csv en tu computadora en la ruta proporcionada):
+
+```{r}
+#NH0910 <- getNH0910("datos/NH0910.csv")
+```
+
+Otros centros disponibles para descargar:
+
+-   `getNH0472()`
+
+-   `getNH0437()`
+
+-   `getNH0098()`
+
+-   `getNH0046()`
+
+Pero si queres leer el .csv sin descargarlo usar:
+
+```{r}
+NH0910 <- read_centro_csv("NH0910")
+NH0910
+```
+
+NimbusR tambien contiene los metadatos de los centros meteorológicos, se pueden importar así:
+
+```{r}
+metadatos <- NimbusR::metadatos
+dplyr::glimpse(metadatos)
+```
+
+### Graficando...
+
+```{r}
+plot_temperatura_abrigo(centros)
+```
+
+Recordar que `plot_temperatura_abrigo` tiene 2 parametros opcionales:
+
+-   Colores = Para cambiar los colores de las lineas en el gráfico
+
+-   Titulo = Para cambiar el titulo en nuestro plot
+
+### Analizamos la temperatura abrigo por centro...
+
+```{r}
+Summary_Temperatura_Abrigo(centros)
+```
+
+## Para más información de las funciones...
+
+Entrar en Rstudio y buscar la documentación con:
+
+```{r}
+#?centros_df
+#?plot_temperatura_abrigo
+```
