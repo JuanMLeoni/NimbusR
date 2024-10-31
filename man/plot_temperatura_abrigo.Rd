@@ -4,10 +4,10 @@
 \alias{plot_temperatura_abrigo}
 \title{Serie de tiempo temperatura abrigo}
 \usage{
-plot_temperatura_abrigo(...)
+plot_temperatura_abrigo(dataset)
 }
 \arguments{
-\item{...}{Datasets de los centros a graficar (separados por comas).}
+\item{dataset}{Dataset con datos de los centros (Deben tener columna "temperatura_abrigo_150cm")}
 }
 \value{
 Gráfico de la temperatura abrigo.

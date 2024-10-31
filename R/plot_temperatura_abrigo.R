@@ -3,7 +3,7 @@
 #' Genera un grafico de serie de tiempo que muestra la temperatura abrigo de cada estacion
 #' @param dataset Dataset con datos de los centros (Deben tener columna "temperatura_abrigo_150cm")
 #'
-#' @return Gráfico de la temperatura abrigo.
+#' @return Grafico de la temperatura abrigo.
 #' @export
 #'
 #' @examples
@@ -34,7 +34,7 @@ plot_temperatura_abrigo <- function(dataset) {
     summarise(temperatura_media = mean(temperatura_abrigo_150cm, na.rm = TRUE)) |>
     ggplot(aes(mes, temperatura_media)) +
     geom_line(aes(color = id), linewidth = 1.4) +
-    labs(x = "Mes", y = "Temperatura Media (C°)", title = "Serie de Tiempo Mensual de Temperatura Abrigo", color = "Estación") +
+    labs(x = "Mes", y = "Temperatura Media (C°)", title = "Serie de Tiempo Mensual de Temperatura Abrigo", color = "Estacion") +
     theme_minimal(base_size = 14)
 
   return(grafico)
