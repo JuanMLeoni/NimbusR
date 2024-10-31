@@ -39,7 +39,7 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">plot_temperatura_abrigo</span><span class="op">(</span><span class="va">dataset</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">plot_temperatura_abrigo</span><span class="op">(</span><span class="va">dataset</span>, colores <span class="op">=</span> <span class="cn">NULL</span>, titulo <span class="op">=</span> <span class="st">"Temperatura Abrigo"</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -55,6 +55,10 @@
     <p>Grafico de la temperatura abrigo.</p>
     </div>
     <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
+    <p>Los dataset deben tener una columna "id" para identificar el centro metereologico</p>
+    </div>
+    <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
     <p>JM y VM</p>
     </div>
@@ -64,6 +68,10 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">dataset</span> <span class="op">&lt;-</span> <span class="fu">NimbusR</span><span class="fu">::</span><span class="va"><a href="centros_df.html">centros_df</a></span></span></span>
 <span class="r-in"><span><span class="fu">plot_temperatura_abrigo</span><span class="op">(</span><span class="va">dataset</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="plot_temperatura_abrigo-1.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu">plot_temperatura_abrigo</span><span class="op">(</span><span class="va">dataset</span>, titulo <span class="op">=</span> <span class="st">"Temperatura Abrigo Mensual"</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="plot_temperatura_abrigo-2.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu">plot_temperatura_abrigo</span><span class="op">(</span><span class="va">df</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"black"</span>,<span class="st">"pink"</span>, <span class="st">"lightblue"</span><span class="op">)</span>, titulo <span class="op">=</span> <span class="st">"Temperatura Abrigo Mensual"</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in plot_temperatura_abrigo(df, c("red", "blue", "black", "pink",     "lightblue"), titulo = "Temperatura Abrigo Mensual"):</span> El argumento 'dataset' debe ser un data frame.</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   NimbusR: NimbusR.html
-last_built: 2024-10-31T18:43Z
+last_built: 2024-10-31T19:08Z
 urls:
   reference: https://juanmleoni.github.io/NimbusR/reference
   article: https://juanmleoni.github.io/NimbusR/articles
