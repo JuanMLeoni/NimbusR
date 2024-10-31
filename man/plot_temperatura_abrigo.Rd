@@ -4,7 +4,7 @@
 \alias{plot_temperatura_abrigo}
 \title{Serie de tiempo temperatura abrigo}
 \usage{
-plot_temperatura_abrigo(dataset)
+plot_temperatura_abrigo(dataset, colores = NULL, titulo = "Temperatura Abrigo")
 }
 \arguments{
 \item{dataset}{Dataset con datos de los centros (Deben tener columna "temperatura_abrigo_150cm")}
@@ -15,9 +15,14 @@ Grafico de la temperatura abrigo.
 \description{
 Genera un grafico de serie de tiempo que muestra la temperatura abrigo de cada estacion
 }
+\details{
+Los dataset deben tener una columna "id" para identificar el centro metereologico
+}
 \examples{
 dataset <- NimbusR::centros_df
 plot_temperatura_abrigo(dataset)
+plot_temperatura_abrigo(dataset, titulo = "Temperatura Abrigo Mensual")
+plot_temperatura_abrigo(df,c("red", "blue", "black","pink", "lightblue"), titulo = "Temperatura Abrigo Mensual")
 }
 \author{
 JM y VM
