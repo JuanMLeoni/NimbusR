@@ -12,7 +12,7 @@ Summary_Temperatura_Abrigo = function (...) {
   Estaciones_lista <- list(...)
 
   if (!all(sapply(Estaciones_lista, is.data.frame))) {
-    stop("Los parametros deben ser dataframes")
+    cli::cli_abort("Todos los parámetros deben ser data frames.")
   }
 
   datos_combinados <- do.call(rbind, Estaciones_lista)
@@ -20,7 +20,7 @@ Summary_Temperatura_Abrigo = function (...) {
   required_columns <- c("id", "temperatura_abrigo_150cm")
   missing_columns <- setdiff(required_columns, names(datos_combinados))
   if (length(missing_columns) > 0) {
-    stop(paste("Las siguientes columnas faltan en los dataset: ", paste(missing_columns, collapse = ", ")))
+    cli::cli_abort("Las siguientes columnas faltan en los dataset: {paste(missing_columns, collapse = ', ')}.")
   }
 
   datos_combinados |>
