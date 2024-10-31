@@ -23,5 +23,8 @@ Depends:
 LazyData: true
 Imports:
     cli,
+    dplyr,
+    ggplot2,
+    lubridate,
     readr
 Config/testthat/edition: 3

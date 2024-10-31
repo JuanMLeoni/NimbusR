@@ -7,10 +7,10 @@
 #' @export
 #'
 #' @examples
-#'
+#' dataset <- NimbusR::centros_df
+#' plot_temperatura_abrigo(dataset)
 #' @author JM y VM
 plot_temperatura_abrigo <- function(dataset) {
-
   # Validaciones de `dataset` y columnas
   if (!"data.frame" %in% class(dataset)) {
     cli::cli_abort("El argumento 'dataset' debe ser un data frame.")
@@ -29,13 +29,13 @@ plot_temperatura_abrigo <- function(dataset) {
 
   # Graficar
   grafico <- dataset |>
-    mutate(mes = month(fecha)) |>
-    group_by(id, mes) |>
-    summarise(temperatura_media = mean(temperatura_abrigo_150cm, na.rm = TRUE)) |>
-    ggplot(aes(mes, temperatura_media)) +
-    geom_line(aes(color = id), linewidth = 1.4) +
-    labs(x = "Mes", y = "Temperatura Media (C°)", title = "Serie de Tiempo Mensual de Temperatura Abrigo", color = "Estacion") +
-    theme_minimal(base_size = 14)
+    dplyr::mutate(mes = lubridate::month(fecha)) |>
+    dplyr::group_by(id, mes) |>
+    dplyr::summarise(temperatura_media = mean(temperatura_abrigo_150cm, na.rm = TRUE)) |>
+    ggplot2::ggplot(ggplot2::aes(mes, temperatura_media)) +
+    ggplot2::geom_line(ggplot2::aes(color = id), linewidth = 1.4) +
+    ggplot2::labs(x = "Mes", y = "Temperatura Media (C\u00b0)", title = "Serie de Tiempo Mensual de Temperatura Abrigo", color = "Estaci\u00f3n") +
+    ggplot2::theme_minimal(base_size = 14)
 
   return(grafico)
 }

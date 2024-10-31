@@ -10,10 +10,14 @@ plot_temperatura_abrigo(dataset)
 \item{dataset}{Dataset con datos de los centros (Deben tener columna "temperatura_abrigo_150cm")}
 }
 \value{
-Gráfico de la temperatura abrigo.
+Grafico de la temperatura abrigo.
 }
 \description{
 Genera un grafico de serie de tiempo que muestra la temperatura abrigo de cada estacion
+}
+\examples{
+dataset <- NimbusR::centros_df
+plot_temperatura_abrigo(dataset)
 }
 \author{
 JM y VM
