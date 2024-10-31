@@ -51,27 +51,119 @@
 </h1></div>
 <!-- badges: start -->
 
-<p>El objetivo de NimbusR es garantizar al desarrollador herramientas para leer, analizar y trabajar con datos meteorológicos</p>
+<!-- badges: end -->
+<p>NimbusR es un paquete de R diseñado para el análisis y visualización de datos relacionados con las condiciones meteorológicas y la temperatura. Con un enfoque en la facilidad de uso y la eficiencia, NimbusR permite a los usuarios generar gráficos informativos y realizar análisis estadísticos con conjuntos de datos meteorológicos.</p>
+<p><strong>Funcionalidades</strong>:</p>
+<ul>
+<li><p><strong>Visualización de Temperaturas</strong>: Genera gráficos de series de tiempo que muestran las temperaturas en diferentes estaciones, facilitando la comparación entre distintas ubicaciones y periodos.</p></li>
+<li><p><strong>Resumen Estadístico</strong>: Calcula estadísticas descriptivas, como la temperatura media, máxima, mínima y desviación estándar, a partir de los datos de temperatura de múltiples estaciones.</p></li>
+<li><p><strong>Validaciones</strong>: Incluye validaciones robustas para asegurar que los conjuntos de datos cumplen con los requisitos necesarios antes de realizar análisis, mejorando la confiabilidad de los resultados.</p></li>
+<li><p><strong>Facilidad de uso</strong>: Diseñado para que incluso los usuarios menos experimentados puedan comenzar a trabajar con datos meteorológicos rápidamente.</p></li>
+<li><p><strong>Interoperabilidad</strong>: Funciona bien con otras librerías populares de R, como <code>dplyr</code> y <code>ggplot2</code>, facilitando la integración en flujos de trabajo existentes.</p></li>
+<li><p><strong>Documentación completa</strong>: Cada función incluye documentación detallada, ejemplos y descripciones para ayudar a los usuarios a comprender su funcionamiento.</p></li>
+</ul>
 <div class="section level2">
 <h2 id="instalación">Instalación<a class="anchor" aria-label="anchor" href="#instalaci%C3%B3n"></a>
 </h2>
 <p>Podes instalar la versión en desarrollo de Nimbus en <a href="https://github.com/JuanMLeoni/NimbusR" class="external-link">GitHub</a>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
-<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"JuanMLeoni/NimbusR"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"JuanMLeoni/NimbusR"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"JuanMLeoni/NimbusR"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="ejemplo">Ejemplo<a class="anchor" aria-label="anchor" href="#ejemplo"></a>
+<h2 id="funcionalidades">Funcionalidades<a class="anchor" aria-label="anchor" href="#funcionalidades"></a>
 </h2>
 <p>Para verificar que NimbusR se descargó de forma correcta probar con:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JuanMLeoni/Rprogramacion" class="external-link">NimbusR</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/TempCtoF.html">TempCtoF</a></span><span class="op">(</span><span class="fl">15</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 59</span></span></code></pre></div>
-<p>You’ll still need to render <code>README.Rmd</code> regularly, to keep <code>README.md</code> up-to-date. <code>devtools::build_readme()</code> is handy for this.</p>
-<p>You can also embed plots, for example:</p>
-<p><img src="reference/figures/README-pressure-1.png" width="100%"></p>
-<p>In that case, don’t forget to commit and push the resulting figure files, so they display on GitHub and CRAN.</p>
+<p><strong>Para ver todas las funciones y dataset del paquete, entrar a la página de <a href="https://juanmleoni.github.io/NimbusR/">NimbusR</a></strong></p>
+</div>
+<div class="section level2">
+<h2 id="reporte-de-bugs-y-errores">Reporte de Bugs y Errores<a class="anchor" aria-label="anchor" href="#reporte-de-bugs-y-errores"></a>
+</h2>
+<p>En NimbusR, nos esforzamos por ofrecer un paquete libre de errores y fácil de usar. Sin embargo, si encuentras un bug o un error, queremos asegurarnos de que pueda ser resuelto rápidamente. A continuación, se indican los pasos a seguir para reportar problemas de manera efectiva:</p>
+<div class="section level3">
+<h3 id="cómo-reportar-un-bug">Cómo reportar un Bug<a class="anchor" aria-label="anchor" href="#c%C3%B3mo-reportar-un-bug"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>
+<p><strong>Verifica si el problema ya fue reportado:</strong></p>
+<p>Antes de crear un nuevo reporte, revisa los <a href="https://github.com/JuanMLeoni/NimbusR/issues" class="external-link">Issues</a> en nuestro repositorio de GitHub para ver si el bug ya ha sido reportado. Si es así, puedes comentar en ese issue para agregar más detalles.</p>
+</li>
+<li>
+<p><strong>Crea un nuevo Issue:</strong></p>
+<p>Si no encuentras el problema que experimentaste, crea un nuevo issue en el repositorio. Para ello, proporciona la siguiente información:</p>
+<ul>
+<li><p><strong>Descripción del bug</strong>: Una breve descripción del problema que estás experimentando.</p></li>
+<li><p><strong>Pasos para reproducir</strong>: Instrucciones claras y detalladas sobre cómo reproducir el error. Incluye código de ejemplo si es posible</p></li>
+<li><p><strong>Resultados esperados</strong>: Describe lo que esperabas que sucediera.</p></li>
+<li><p><strong>Resultados obtenidos:</strong> Explica lo que realmente ocurrió, incluyendo mensajes de error si los hubo.</p></li>
+<li><p><strong>Entorno de trabajo:</strong> Proporciona detalles sobre tu entorno, como la versión de R, la versión de NimbusR, y cualquier otra librería relevante que estés utilizando.</p></li>
+</ul>
+</li>
+</ol>
+<p>Nos comprometemos a responder a los reportes de bugs en un plazo razonable. Una vez que recibamos tu reporte, haremos todo lo posible para replicar el problema y trabajar en una solución. Puedes seguir el progreso de tu reporte en la sección de issues de nuestro repositorio.</p>
+<p>Agradecemos tu colaboración para mejorar NimbusR. Cada reporte de bug nos ayuda a hacer que el paquete sea más robusto y útil para todos los usuarios. ¡Gracias por tu apoyo!</p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="guía-de-contribuciones">Guía de Contribuciones<a class="anchor" aria-label="anchor" href="#gu%C3%ADa-de-contribuciones"></a>
+</h2>
+<p>¡Contribuciones son bienvenidas! Si deseas ayudar a mejorar NimbusR, aquí te explicamos cómo puedes hacerlo. Cada tipo de contribución, grande o pequeña, es apreciada y ayuda a que nuestra comunidad crezca.</p>
+<div class="section level3">
+<h3 id="cómo-contribuir">Cómo contribuir<a class="anchor" aria-label="anchor" href="#c%C3%B3mo-contribuir"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>
+<p><strong>Reporta un Problema:</strong></p>
+<p>Si encuentras un bug o un error, por favor, repórtalo siguiendo las instrucciones en la sección <a href="#reporte-de-bugs-y-errores">Reporte de Bugs y Errores</a>. La información detallada que proporcionas nos ayuda a mejorar el paquete.</p>
+</li>
+<li>
+<p><strong>Mejora la Documentación:</strong></p>
+<p>La documentación clara y precisa es fundamental. Si encuentras áreas que pueden mejorarse, no dudes en sugerir cambios o incluso enviar un pull request con tus mejoras.</p>
+</li>
+<li>
+<p><strong>Sugerencias de Nuevas Funciones:</strong></p>
+<p>Si tienes ideas para nuevas funciones o mejoras, crea un nuevo issue en el repositorio. Proporciona detalles sobre tu sugerencia y por qué crees que sería útil para otros usuarios.</p>
+</li>
+<li>
+<p><strong>Contribuir Código</strong>: Si deseas contribuir con código, aquí hay un proceso sugerido:</p>
+<ul>
+<li>
+<strong>Haz un Fork del Repositorio</strong>: Crea una copia del repositorio en tu propia cuenta de GitHub.</li>
+<li>
+<strong>Crea una Nueva Rama</strong>: Antes de realizar cambios, crea una nueva rama en tu fork para trabajar. Nombra la rama de manera descriptiva, por ejemplo, <code>mejora-documentacion</code> o <code>nueva-funcion</code>.</li>
+<li>
+<strong>Realiza tus Cambios</strong>: Haz las modificaciones necesarias en tu rama. Asegúrate de seguir las mejores prácticas de codificación y de que el código esté bien documentado.</li>
+<li>
+<strong>Pruebas</strong>: Si has agregado nuevas funcionalidades, asegúrate de incluir pruebas para verificar que todo funcione como se espera.</li>
+<li>
+<strong>Crea un Pull Request</strong>: Una vez que estés satisfecho con tus cambios, envía un pull request a la rama principal del repositorio. Describe claramente los cambios realizados y por qué son beneficiosos.</li>
+</ul>
+</li>
+<li><p><strong>Revisiones de Código</strong>: Estamos comprometidos con la calidad del código. Si contribuyes, tu pull request será revisado por uno de los mantenedores del paquete. Puedes recibir comentarios y sugerencias para mejorar tu contribución.</p></li>
+</ol>
+</div>
+<div class="section level3">
+<h3 id="estilo-de-código">Estilo de Código<a class="anchor" aria-label="anchor" href="#estilo-de-c%C3%B3digo"></a>
+</h3>
+<p>Asegúrate de seguir las pautas de estilo de código de R y de que tu código esté bien comentado. Esto facilitará la revisión y la comprensión por parte de otros colaboradores.</p>
+</div>
+<div class="section level3">
+<h3 id="agradecimientos">Agradecimientos<a class="anchor" aria-label="anchor" href="#agradecimientos"></a>
+</h3>
+<p>Agradecemos a todos los que dedican tiempo y esfuerzo a contribuir a NimbusR. Cada contribución ayuda a construir un paquete más robusto y valioso para la comunidad. ¡Gracias por tu apoyo!</p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="código-de-conducta">Código de Conducta<a class="anchor" aria-label="anchor" href="#c%C3%B3digo-de-conducta"></a>
+</h2>
+<p>Para asegurar un ambiente inclusivo y respetuoso en nuestra comunidad, hemos establecido un Código de Conducta. Te invitamos a revisar el archivo <a href="CODE_OF_CONDUCT.html">CODE_OF_CONDUCT.md</a> para conocer las expectativas y normas que guían nuestra interacción.</p>
+<p>Es fundamental que todos los colaboradores y usuarios se adhieran a este código para fomentar un espacio seguro y acogedor. Agradecemos tu compromiso con estos principios.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
