@@ -47,7 +47,15 @@
 
 
 <dl><dt id="arg-dataset">dataset<a class="anchor" aria-label="anchor" href="#arg-dataset"></a></dt>
-<dd><p>Dataset con datos de los centros (Deben tener columna "temperatura_abrigo_150cm")</p></dd>
+<dd><p>Dataset con datos de los centros</p></dd>
+
+
+<dt id="arg-colores">colores<a class="anchor" aria-label="anchor" href="#arg-colores"></a></dt>
+<dd><p>Un vector opcional de colores para las líneas de cada estación en el gráfico. <strong>Default es <code>NULL</code></strong>, en cuyo caso se seleccionan colores aleatorios.</p></dd>
+
+
+<dt id="arg-titulo">titulo<a class="anchor" aria-label="anchor" href="#arg-titulo"></a></dt>
+<dd><p>Un título opcional para el gráfico. <strong>Default es <code>"Temperatura"</code>.</strong></p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -56,7 +64,14 @@
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>Los dataset deben tener una columna "id" para identificar el centro metereologico</p>
+
+<ol><li><p>El dataset debe tener una columna "id" para identificar el centro metereologico.</p></li>
+<li><p>Debe tener columna "temperatura_abrigo_150cm".</p></li>
+<li><p>Debe tener columna "fecha" de tipo Date.</p></li>
+</ol></div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p><a href="centros_df.html">centros_df</a> Para ver el dataset del ejemplo</p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
