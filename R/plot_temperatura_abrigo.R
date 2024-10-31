@@ -16,7 +16,7 @@
 #' dataset <- NimbusR::centros_df
 #' plot_temperatura_abrigo(dataset)
 #' plot_temperatura_abrigo(dataset, titulo = "Temperatura Abrigo Mensual")
-#' plot_temperatura_abrigo(df,c("red", "blue", "black","pink", "lightblue"), titulo = "Temperatura Abrigo Mensual")
+#' plot_temperatura_abrigo(dataset,c("red", "blue", "black","pink", "lightblue"), titulo = "Temperatura Abrigo Mensual")
 #' @author JM y VM
 #' @seealso [centros_df] Para ver el dataset del ejemplo
 plot_temperatura_abrigo <- function(dataset, colores = NULL, titulo = "Temperatura Abrigo") {

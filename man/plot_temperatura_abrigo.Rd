@@ -30,7 +30,7 @@ Genera un grafico de serie de tiempo que muestra la temperatura abrigo de cada e
 dataset <- NimbusR::centros_df
 plot_temperatura_abrigo(dataset)
 plot_temperatura_abrigo(dataset, titulo = "Temperatura Abrigo Mensual")
-plot_temperatura_abrigo(df,c("red", "blue", "black","pink", "lightblue"), titulo = "Temperatura Abrigo Mensual")
+plot_temperatura_abrigo(dataset,c("red", "blue", "black","pink", "lightblue"), titulo = "Temperatura Abrigo Mensual")
 }
 \seealso{
 \link{centros_df} Para ver el dataset del ejemplo
