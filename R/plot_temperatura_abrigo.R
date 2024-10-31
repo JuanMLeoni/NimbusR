@@ -1,7 +1,7 @@
 #' @title Serie de tiempo temperatura abrigo
 #' @description
 #' Genera un grafico de serie de tiempo que muestra la temperatura abrigo de cada estacion
-#' @param ... Datasets de los centros a graficar (separados por comas).
+#' @param dataset Dataset con datos de los centros (Deben tener columna "temperatura_abrigo_150cm")
 #'
 #' @return Gráfico de la temperatura abrigo.
 #' @export
@@ -9,17 +9,33 @@
 #' @examples
 #'
 #' @author JM y VM
-plot_temperatura_abrigo <- function(...) {
-  # Combina los datasets
-  centros_list <- list(...)
-  centros_df <- bind_rows(centros_list, .id = "id")
+plot_temperatura_abrigo <- function(dataset) {
+
+  # Validaciones de `dataset` y columnas
+  if (!"data.frame" %in% class(dataset)) {
+    cli::cli_abort("El argumento 'dataset' debe ser un data frame.")
+  }
+
+  required_cols <- c("fecha", "temperatura_abrigo_150cm", "id")
+  missing_cols <- setdiff(required_cols, colnames(dataset))
+
+  if (length(missing_cols) > 0) {
+    cli::cli_abort("El 'dataset' no contiene las columnas necesarias: {paste(missing_cols, collapse = ', ')}.")
+  }
+
+  if (!inherits(dataset$fecha, "Date") && !inherits(dataset$fecha, "POSIXt")) {
+    cli::cli_abort("La columna 'fecha' debe ser de tipo Date o POSIXt.")
+  }
 
   # Graficar
-  ggplot(centros_df |>
-           mutate(mes = month(fecha)) |>
-           group_by(id, mes) |>
-           summarise(temperatura_media = mean(temperatura_abrigo_150cm, na.rm = TRUE)) ) +
-    geom_line(aes(x = mes, y = temperatura_media, color = id)) +
-    labs(x = "Mes", y = "Temperatura Media", title = "Serie de Tiempo de Temperatura Abrigo") +
-    theme_minimal()
+  grafico <- dataset |>
+    mutate(mes = month(fecha)) |>
+    group_by(id, mes) |>
+    summarise(temperatura_media = mean(temperatura_abrigo_150cm, na.rm = TRUE)) |>
+    ggplot(aes(mes, temperatura_media)) +
+    geom_line(aes(color = id), linewidth = 1.4) +
+    labs(x = "Mes", y = "Temperatura Media (C°)", title = "Serie de Tiempo Mensual de Temperatura Abrigo", color = "Estación") +
+    theme_minimal(base_size = 14)
+
+  return(grafico)
 }
