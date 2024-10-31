@@ -6,3 +6,4 @@
 ^pkgdown$
 ^\.github$
 ^data-raw$
+^CODE_OF_CONDUCT\.md$
