@@ -4,7 +4,7 @@
 # NimbusR
 
 NimbusR
-<img src="imagenes/Logo2.png" alt="NimbusR" align="right" style="float: right; margin-left: 10px;" width="200"/>
+<img src="man/figures/Logo2.png" alt="NimbusR" align="right" style="float: right; margin-left: 10px;" width="200"/>
 
 <!-- badges: start -->
 
