@@ -124,10 +124,10 @@ Asegúrate de seguir las pautas de estilo de código de R y de que tu código es
 
 ### Agradecimientos
 
-Agradecemos a todos los que dedican tiempo y esfuerzo a contribuir a NimbusR. Cada contribución ayuda a construir un paquete más robusto y valioso para la comunidad. ¡Gracias por tu apoyo!
+Agradecemos a todos los que dedican tiempo y esfuerzo a contribuir a NimbusR. Cada contribución ayuda a construir un paquete más robusto y valioso para la comunidad. Cristo ¡Gracias por tu apoyo!
 
 ## Código de Conducta
 
-Para asegurar un ambiente inclusivo y respetuoso en nuestra comunidad, hemos establecido un Código de Conducta. Te invitamos a revisar el archivo [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) para conocer las expectativas y normas que guían nuestra interacción.
+Para asegurar un ambiente inclusivo y respetuoso en nuestra comunidad, hemos establecido un Código de Conducta. Te invitamos a revisar el archivo [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) Para conocer las expectativas y normas que guían nuestra interacción.
 
 Es fundamental que todos los colaboradores y usuarios se adhieran a este código para fomentar un espacio seguro y acogedor. Agradecemos tu compromiso con estos principios.
