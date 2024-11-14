@@ -16,7 +16,7 @@ Si la descarga fue exitosa devuelve el dataset
 Descarga los datos del centro NH0910
 }
 \examples{
-getNH0910("NH0910.csv")
+getNH0910(file.path(tempdir(), "NH0910.csv"))
 }
 \seealso{
 \code{\link[=getNH0472]{getNH0472()}}, \code{\link[=getNH0437]{getNH0437()}}, \code{\link[=getNH0098]{getNH0098()}}, \code{\link[=getNH0046]{getNH0046()}}

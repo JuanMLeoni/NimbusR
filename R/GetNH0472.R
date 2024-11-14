@@ -5,7 +5,7 @@
 #' @return Si la descarga fue exitosa devuelve el dataset
 #' @export
 #' @examples
-#' getNH0472("NH0472.csv")
+#' getNH0472(file.path(tempdir(), "NH0472.csv"))
 #' @author JM y VM
 #' @seealso [getNH0910()], [getNH0437()], [getNH0098()], [getNH0046()]
 getNH0472 = function (destfile) {

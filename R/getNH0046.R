@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' getNH0046("NH0046.csv")
+#' getNH0046(file.path(tempdir(), "NH0046.csv"))
 #' @author JM y VM
 #' @importFrom utils download.file
 #' @seealso [getNH0910()], [getNH0472()], [getNH0437()], [getNH0098()]

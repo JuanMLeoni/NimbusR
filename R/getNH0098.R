@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' getNH0098("NH0098.csv")
+#' getNH0098(file.path(tempdir(), "NH0098.csv"))
 #' @author JM y VM
 #' @seealso [getNH0910()], [getNH0472()], [getNH0437()], [getNH0046()]
 getNH0098 = function (destfile) {
