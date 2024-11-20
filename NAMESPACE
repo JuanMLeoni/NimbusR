@@ -3,6 +3,7 @@
 export(Summary_Temperatura_Abrigo)
 export(TempCtoF)
 export(TempFtoC)
+export(getCentros)
 export(getNH0046)
 export(getNH0098)
 export(getNH0437)
